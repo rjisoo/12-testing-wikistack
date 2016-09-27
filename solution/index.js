@@ -36,13 +36,16 @@ app.use(function (err, req, res, next) {
     res.status(500).send(err.message);
 });
 
-User.sync()
-    .then(function () {
-        return Page.sync();
-    })
-    .then(function () {
-        app.listen(3001, function () {
-            console.log('Server is listening on port 3001!');
-        });
-    });
-
+// User.sync()
+    // .then(function () {
+    //     return Page.sync();
+    // })
+    // .then(function () {
+    //     app.listen(3001, function () {
+    //         console.log('Server is listening on port 3001!');
+    //     });
+    // });
+    
+app.listen(3001, function () {
+    console.log('Server is listening on port 3001!');
+});
